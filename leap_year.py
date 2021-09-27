@@ -15,20 +15,20 @@ def main():
     # process
     try:
         user_year = int(user_string)
-        if user_year % 4 != 0:
-            # output
-            print("It is a common year.")
-        else:
+        if user_year % 400 != 0:
             if user_year % 100 != 0:
-                # output
-                print("It is a leap year.")
-            else:
-                if user_year % 400 != 0:
+                if user_year % 4 != 0:
                     # output
                     print("It is a common year.")
                 else:
                     # output
                     print("It is a leap year.")
+            else:
+                # output
+                print("It is a common year.")
+        else:
+            # output
+            print("It is a leap year.")
     except Exception:
         # output
         print("{} is not a valid input.".format(user_string))
